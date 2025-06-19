@@ -2,10 +2,6 @@
 
 This is a fully responsive landing page built using **Next.js (App Router)**, **TypeScript**, **Tailwind CSS**, and **GSAP** for animations.
 
-## 🔗 Live Demo
-
-👉 [View Live Site](https://gautmnew-lc28lk47c-gautm-sanghvis-projects.vercel.app)
-
 ## 📁 GitHub Repository
 
 👉 [View on GitHub](https://github.com/gautmsanghvi/landingpage)
