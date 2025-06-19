@@ -6,6 +6,13 @@ This is a fully responsive landing page built using **Next.js (App Router)**, **
 
 👉 [View on GitHub](https://github.com/gautmsanghvi/landingpage)
 
+---
+
+## 🔗 Live Demo
+
+👉 [View Live Site](https://gautmnew-1kevqs1z5-gautm-sanghvis-projects.vercel.app)
+
+
 ## 🛠️ Tech Stack
 
 - ⚛️ Next.js 14 (App Router)
