@@ -1,0 +1,11 @@
+
+---
+
+### ✅ After Editing:
+
+Run these in terminal:
+
+```bash
+git add README.md
+git commit -m "Update README with project info"
+git push
