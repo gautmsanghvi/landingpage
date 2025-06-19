@@ -1,25 +1,42 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+'use client'
+
+import { useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
-  const titleRef = useRef(null);
-  const descRef = useRef(null);
-
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power2.out", duration: 1 } });
-    tl.fromTo(titleRef.current, { y: 50, opacity: 0 }, { y: 0, opacity: 1 });
-    tl.fromTo(descRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1 }, "-=0.5");
-  }, []);
+    gsap.from('.fade-in', {
+      scrollTrigger: {
+        trigger: '.fade-in',
+        start: 'top 80%',
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: 'power2.out',
+    })
+  }, [])
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center text-center px-4 bg-white">
-      <h1 ref={titleRef} className="text-5xl font-bold text-gray-900">
-        Elevate Your Everyday Style
-      </h1>
-      <p ref={descRef} className="mt-4 text-lg text-gray-600 max-w-xl">
-        Handpicked products that combine fashion and function.
-      </p>
+    <section className="fade-in relative h-[60vh] flex items-center justify-center text-center overflow-hidden bg-white dark:bg-black">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute w-full h-full object-cover opacity-30 z-0"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="relative z-10 text-white dark:text-white px-4">
+        <h1 className="text-5xl font-bold">Live in Luxury</h1>
+        <p className="mt-4 text-xl">Experience the new era of style</p>
+      </div>
     </section>
-  );
+  )
 }
